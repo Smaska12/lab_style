@@ -17,17 +17,19 @@ body {
     padding: 20px 50px;
 }
 
+/* КНОПКА В СТАНДАРТНОМ СТИЛЕ */
 .btn-basic {
     border: #05030f;
     border-radius: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 .btn-basic:hover {
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
 
-
+/* КНОПКА В ИГРОВОМ СТИЛЕ */
 .btn-game {
     position: relative;
     background: none;
@@ -42,6 +44,7 @@ body {
     width: 12px;
     height: 12px;
     border: 2px solid #00ffff;
+    transition: 0.3s;
 }
 
 .btn-game::before {
@@ -56,4 +59,34 @@ body {
     right: -4px;
     border-left: none;
     border-top: none;
+}
+
+.btn-game:hover::before,
+.btn-game:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* КНОПКА С НЕОНОМ */
+
+.btn-neon {
+    background: transparent;
+    border: none;
+    box-shadow: 
+        0px 0px 10px #ff8df4,
+        0px 0px 30px #ff52ee,
+        0px 0px 50px #ff00e6;
+    text-shadow: 0px 0px 5px #ff00e6, 0px 0px 10px #ff00e6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    color: #ff00e6;
+    box-shadow: 
+        0px 0px 10px #ff8df4,
+        0px 0px 40px #ff52ee,
+        0px 0px 100px #ff00e6;
+    text-shadow: 0px 0px 10px #ff00e6, 0px 0px 20px #ff00e6;
 }
