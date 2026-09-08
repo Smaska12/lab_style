@@ -9,7 +9,8 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-columns: auto auto;
     gap: 100px;
 }
 
@@ -35,7 +36,7 @@ body {
 }
 .btn-gold {
     background: #ffe554;
-    color: white;
+    color: black;
     transition: 0.5s;
 }
 .btn-gold:hover {
@@ -102,4 +103,32 @@ body {
         0px 0px 40px #ff52ee,
         0px 0px 100px #ff00e6;
     text-shadow: 0px 0px 10px #ff00e6, 0px 0px 20px #ff00e6;
+}
+
+/* PLAY BUTTON */
+.btn-play {
+    position: relative;
+    background: rgb(34, 34, 34);
+    border-radius: 50%;
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn-play::before {
+    content: '▶';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    transition: 0.5s;
+}
+.btn-play:hover {
+    background: rgb(0, 0, 0);
+}
+.btn-play:hover::before {
+    font-size: 20px;
 }
