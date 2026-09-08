@@ -19,14 +19,27 @@ body {
 
 /* КНОПКА В СТАНДАРТНОМ СТИЛЕ */
 .btn-basic {
-    border: #05030f;
-    border-radius: 15px;
+    background: transparent;
+    border: transparent;
+    border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    transition: all 0.2s ease;
 }
-.btn-basic:hover {
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+.btn-blue {
+    background: #1976D2;
+    color: white;
+    transition: 0.5s;
+}
+.btn-blue:hover {
+    background: #1669bb;
+}
+.btn-gold {
+    background: #ffe554;
+    color: white;
+    transition: 0.5s;
+}
+.btn-gold:hover {
+    background: #ffce08;
 }
 
 /* КНОПКА В ИГРОВОМ СТИЛЕ */
