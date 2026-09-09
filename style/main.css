@@ -16,6 +16,7 @@ body {
 
 .btn {
     padding: 20px 50px;
+    cursor: pointer;
 }
 
 /* КНОПКА В СТАНДАРТНОМ СТИЛЕ */
@@ -24,7 +25,6 @@ body {
     border: transparent;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
 }
 .btn-blue {
     background: #1976D2;
@@ -48,7 +48,6 @@ body {
     position: relative;
     background: none;
     border: none;
-    cursor: pointer;
 }
 
 .btn-game::before,
@@ -92,7 +91,6 @@ body {
         0px 0px 30px #ff52ee,
         0px 0px 50px #ff00e6;
     text-shadow: 0px 0px 5px #ff00e6, 0px 0px 10px #ff00e6;
-    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -114,7 +112,6 @@ body {
     width: 15px;
     height: 15px;
     padding: 15px;
-    cursor: pointer;
     transition: 0.5s;
 }
 .btn-play::before {
@@ -143,7 +140,6 @@ body {
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgb(93, 93, 93);
-    cursor: pointer;
     transition: 0.5s;
 }
 .btn-accept::before {
@@ -173,7 +169,6 @@ body {
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgb(93, 93, 93);
-    cursor: pointer;
     transition: 0.5s;
 }
 .btn-reject::before {
@@ -191,4 +186,75 @@ body {
 }
 .btn-reject:hover::before {
     color: rgb(113, 0, 0);
+}
+
+
+/* BUTTON THAT INCREASES WIDTH */
+.btn-width {
+    position: relative;
+    background: #cb0f41;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-width::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 30px;
+    height: 100%;
+    background: #cb0f41;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-width::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 30px;
+    height: 100%;
+    background: #cb0f41;
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn-width:hover::before {
+    left: -20px;
+}
+.btn-width:hover::after {
+    right: -20px;
+}
+
+
+.btn-circle {
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    background: rgb(142, 217, 247);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+.btn-circle::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgb(177, 211, 25);
+    transition: 0.3s;
+    z-index: 1;
+}
+.btn-circle:hover::before {
+    width: 50px;
+    height: 50px;
+    background: rgb(177, 211, 25);
 }
