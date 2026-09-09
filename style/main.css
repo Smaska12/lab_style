@@ -301,7 +301,8 @@ body {
     z-index: -1;
 }
 .btn-paper:hover:after {
-    inset: 0;
+    top: 0;
+    left: calc(0px - 1px);
     opacity: 1;
     z-index: -1;
 }
@@ -344,4 +345,57 @@ body {
     bottom: 0;
     right: 0;
     opacity: 0.5;
+}
+
+/* BUTTON WITH TEXT ON THE RIGHT */ 
+.btn-right-text {
+    position: relative;
+    background: transparent;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-right-text::before,
+.btn-right-text::after {
+    content: '';
+    position: absolute;
+    background: transparent;
+    border: 2px solid #00ffff;
+    height: 5px;
+    width: 5px;
+    transition: 0.3s;
+}
+.btn-right-text::before {
+    top: -2px;
+    right: -5px;
+    border-bottom: none;
+    border-left: none;
+    border-top-right-radius: 5px;
+}
+.btn-right-text::after {
+    bottom: -2px;
+    right: -5px;
+    border-top: none;
+    border-left: none;
+    border-bottom-right-radius: 5px;
+}
+.btn-right-text:hover::after,
+.btn-right-text:hover::before {
+    height: 30px;
+}
+.btn-right-text span {
+    position: absolute;
+    background: transparent;
+    border: none;
+    transform: translate(0%, -50%);
+    top: 50%;
+    right: -30px;
+    transition: 0.3s;
+}
+.btn-right-text:hover span {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
 }
