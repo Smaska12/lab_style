@@ -4,7 +4,6 @@ body {
     /* background: linear-gradient(135deg, #05030f, #1a0b3d, #2d1b5e, #4a1942, #05030f); */
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .btn-grid {
@@ -229,32 +228,49 @@ body {
     right: -20px;
 }
 
-
+/* BUTTON CIRCLE */
 .btn-circle {
     position: relative;
     border: none;
     border-radius: 50%;
-    background: rgb(142, 217, 247);
+    background: rgb(105, 213, 255);
     padding: 0;
     width: 30px;
     height: 30px;
-    z-index: 2;
 }
 .btn-circle::before {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: rgb(177, 211, 25);
+    border: 10px solid rgba(105, 213, 255, 0.6);
+    background: transparent;
     transition: 0.3s;
-    z-index: 1;
+    z-index: -1;
 }
 .btn-circle:hover::before {
-    width: 50px;
-    height: 50px;
-    background: rgb(177, 211, 25);
+    width: 20px;
+    height: 20px;
+}
+.btn-circle::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 10px solid rgba(105, 213, 255, 0.3);
+    background: transparent;
+    transition: 0.3s;
+    z-index: -1;
+}
+.btn-circle:hover::after {
+    width: 30px;
+    height: 30px;
 }
