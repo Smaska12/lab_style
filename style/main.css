@@ -1,6 +1,6 @@
 body {
     display: flex;
-    height: 100vh;
+    height: 100%;
     /* background: linear-gradient(135deg, #05030f, #1a0b3d, #2d1b5e, #4a1942, #05030f); */
     justify-content: center;
     align-items: center;
@@ -398,4 +398,64 @@ body {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+}
+
+/* 3D LINK BUTTON */
+.btn-3D-link {
+    position: relative;
+    background: transparent;
+    border: 1px solid rgb(0, 119, 255);
+    border-radius: 10px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-45deg) skewY(10deg);
+    filter: drop-shadow(0px 0px 1px rgb(0, 119, 255));
+    transition: 0.5s;
+}
+.btn-3D-link::before,
+.btn-3D-link::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: calc(50px - 1px);
+    height: calc(50px - 1px);
+    border: 1px solid rgb(0, 119, 255);
+    filter: drop-shadow(0px 0px 1px rgb(0, 119, 255));
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.btn-3D-link::before {
+    top: 60%;
+    left: 40%;
+    border-color: rgb(50, 150, 255);
+    opacity: 0.8;
+    z-index: -1;
+}
+.btn-3D-link::after {
+    top: 70%;
+    left: 30%;
+    border-color: rgb(100, 180, 255);
+    opacity: 0.5;
+    z-index: -1;
+}
+.btn-3D-link:hover::before,
+.btn-3D-link:hover::after {
+    top: 50%;
+    left: 50%;
+    border-color: rgb(0, 119, 255);
+}
+.btn-3D-link:hover {
+    border: 3px solid rgb(0, 119, 255);
+}
+.btn-3D-link span {
+    font-size: large;
+    font-weight: 800;
+    color: rgb(0, 119, 255);
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,
+        2px 2px 0 rgba(0,0,0,0.3);
 }
