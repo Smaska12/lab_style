@@ -1,4 +1,9 @@
-
+:root {
+    --btn-basic-color: #1976D2;
+    --btn-basic-gold-color: #ffe554;
+    --btn-game-color: #e63946;
+    --btn-circle-color: #2a9d8f;
+}
 
 
 body {
@@ -13,10 +18,10 @@ body {
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .element {
@@ -87,7 +92,7 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-blue {
-    background: #1976D2;
+    background: var(--btn-basic-color);
     color: white;
     transition: 0.5s;
 }
@@ -95,7 +100,7 @@ body {
     background: #1669bb;
 }
 .btn-gold {
-    background: #ffe554;
+    background: var(--btn-basic-gold-color);
     transition: 0.5s;
 }
 .btn-gold:hover {
