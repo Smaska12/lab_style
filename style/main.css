@@ -65,6 +65,11 @@ body {
     border-radius: 6px;
     color: #84acdc;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.element-code:hover {
+    border-color: rgb(2, 101, 213);
 }
 
 .element-code code {
