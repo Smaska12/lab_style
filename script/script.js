@@ -1,5 +1,27 @@
 const elementCodes = document.querySelectorAll('.element-code');
 
+function formatClasses(className) {
+    return className.split(' ').map(cls => `.${cls}`).join(' ');
+}
+
+function displayCode(elementCode) {
+    const element = elementCode.closest('.element');
+    const button = element.querySelector('.btn');
+
+    if(!button) return;
+
+    const codeText = formatClasses(button.className);
+
+    const codeElement = document.createElement('code');
+    codeElement.className = 'codes';
+    codeElement.textContent = codeText;
+
+    elementCode.innerHTML = '';
+    elementCode.appendChild(codeElement);
+}
+
+elementCodes.forEach(displayCode);
+
 elementCodes.forEach(elementCode => {
     elementCode.addEventListener('click', async () => {
         const element = elementCode.closest('.element');
@@ -9,6 +31,7 @@ elementCodes.forEach(elementCode => {
 
         try {
             const codeText = button.className;
+
             await navigator.clipboard.writeText(codeText);
 
             const originalHTML = elementCode.innerHTML;
@@ -22,3 +45,4 @@ elementCodes.forEach(elementCode => {
         }
     });
 });
+
