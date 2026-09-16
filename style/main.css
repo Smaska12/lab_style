@@ -67,6 +67,12 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+.element-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .element-code {
     width: 100%;
     padding: 10px 12px;
@@ -77,6 +83,12 @@ body {
     color: #84acdc;
     cursor: pointer;
     transition: 0.3s ease;
+}
+
+.color-input {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .element-code:hover {
@@ -112,7 +124,8 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-blue {
-    background: var(--btn-basic-color);
+    --button-color: #1976D2;
+    background: var(--button-color);
     color: white;
     transition: 0.3s ease;
 }

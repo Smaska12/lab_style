@@ -46,3 +46,13 @@ elementCodes.forEach(elementCode => {
     });
 });
 
+document.querySelectorAll('.element').forEach(element => {
+    const button = element.querySelector('.btn');
+    const colorInput = element.querySelector('.color-input');
+
+    if (!button || !colorInput) return;
+
+    colorInput.addEventListener('input', () => {
+        button.style.setProperty('--button-color', colorInput.value);
+    });
+});
