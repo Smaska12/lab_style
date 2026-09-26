@@ -107,6 +107,13 @@ body {
     width: 100px;
     height: 50px;
 }
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none;
+}
+
 .btn:focus-visible {
     outline: 2px solid white;
     outline-offset: 4px;
