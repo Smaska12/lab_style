@@ -56,3 +56,15 @@ document.querySelectorAll('.element').forEach(element => {
         button.style.setProperty('--button-color', colorInput.value);
     });
 });
+
+function changeColor() {
+    document.querySelectorAll('.element').forEach(element => {
+        const button = element.querySelector('.btn');
+        const colorInput = element.querySelector('.color-input')
+
+        if (!button || !colorInput) return;
+
+        button.style.setProperty('--button-color', colorInput.value);
+    })
+};
+changeColor();

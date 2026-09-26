@@ -104,6 +104,7 @@ body {
     isolation: isolate;
     cursor: pointer;
     outline: none;
+    background: var(--button-color);
     width: 100px;
     height: 50px;
 }
@@ -131,22 +132,21 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-blue {
-    --button-color: #1976D2;
     background: var(--button-color);
     color: white;
     transition: 0.3s ease;
 }
 .btn-blue:hover {
-    background: #1669bb;
+    background: color-mix(in lch, var(--button-color) 80%, black)
 }
 
 .btn-gold {
-    background: var(--btn-basic-gold-color);
+    background: var(--button-color);
     transition: 0.3s ease;
 }
 .btn-gold span { color: #333; }
 .btn-gold:hover {
-    background: #ffce08;
+    background: color-mix(in lch, var(--button-color) 80%, black)
 }
 
 /* КНОПКА В ИГРОВОМ СТИЛЕ */
@@ -163,7 +163,7 @@ body {
     position: absolute;
     width: 12px;
     height: 12px;
-    border: 2px solid #00ffff;
+    border: 2px solid var(--button-color);;
     transition: 0.3s ease;
 }
 
@@ -193,7 +193,7 @@ body {
 }
 .btn-game:focus-visible::after,
 .btn-game:focus-visible::before {
-    box-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 10px var(--button-color);;
 }
 
 
@@ -203,35 +203,35 @@ body {
     background: transparent;
     border: none;
     box-shadow: 
-        0px 0px 10px #ff8df4,
-        0px 0px 30px #ff52ee,
-        0px 0px 50px #ff00e6;
-    text-shadow: 0px 0px 5px #ff00e6, 0px 0px 10px #ff00e6;
+        0px 0px 10px var(--button-color),
+        0px 0px 30px color-mix(in lch, var(--button-color) 40%, white),
+        0px 0px 50px color-mix(in lch, var(--button-color) 80%, white);
+    text-shadow: 0px 0px 5px var(--button-color), 0px 0px 10px var(--button-color);
     transition: 0.3s ease;
 }
 
 .btn-neon:hover {
-    color: #ff00e6;
+    color: var(--button-color);
     box-shadow: 
-        0px 0px 10px #ff8df4,
-        0px 0px 40px #ff52ee,
-        0px 0px 100px #ff00e6;
-    text-shadow: 0px 0px 10px #ff00e6, 0px 0px 20px #ff00e6;
+        0px 0px 10px var(--button-color),
+        0px 0px 40px color-mix(in lch, var(--button-color) 40%, white),
+        0px 0px 100px color-mix(in lch, var(--button-color) 80%, white);
+    text-shadow: 0px 0px 10px var(--button-color), 0px 0px 20px var(--button-color);
 }
 
 .btn-neon:focus-visible {
     outline: none;
     box-shadow: 
-        0px 0px 10px #ff8df4,
-        0px 0px 40px #ff52ee,
-        0px 0px 100px #ff00e6;
-    text-shadow: 0px 0px 10px #ff00e6, 0px 0px 20px #ff00e6;
+        0px 0px 10px var(--button-color),
+        0px 0px 40px color-mix(in lch, var(--button-color) 40%, white),
+        0px 0px 100px color-mix(in lch, var(--button-color) 80%, white);
+    text-shadow: 0px 0px 10px var(--button-color), 0px 0px 20px var(--button-color);
 }
 
 /* PLAY BUTTON */
 .btn-play {
     position: relative;
-    background: rgb(34, 34, 34);
+    background: var(--button-color);
     border-radius: 50%;
     border: 2px solid white;
     box-shadow: 0px 0px 10px rgb(93, 93, 93);
@@ -251,7 +251,7 @@ body {
 }
 .btn-play:hover {
     transform: translate(0px, -5px);
-    background: rgb(0, 0, 0);
+    background: color-mix(in lch, var(--button-color) 80%, white);
 }
 
 .btn-play:focus-visible {
@@ -265,7 +265,7 @@ body {
     width: 15px;
     height: 15px;
     padding: 15px;
-    background: rgba(17, 254, 0, 0.2);
+    background: color-mix(in lch, var(--button-color) 80%, black);
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgb(93, 93, 93);
@@ -273,7 +273,7 @@ body {
 }
 .btn-accept::before {
     content: '✔';
-    color: rgb(11, 172, 0);
+    color: color-mix(in lch, var(--button-color) 20%, rgb(17, 255, 0));
     position: absolute;
     top: 50%;
     left: 50%;
@@ -282,10 +282,10 @@ body {
 }
 .btn-accept:hover {
     transform: translate(0px, -5px);
-    background: rgba(17, 254, 0, 0.4);
+    background: color-mix(in lch, var(--button-color) 80%, white);
 }
 .btn-accept:hover::before {
-    color: rgb(7, 104, 0);
+    color: color-mix(in lch, var(--button-color) 60%, rgb(0, 0, 0));
 }
 .btn-accept:focus-visible {
     transform: translateY(-5px);
